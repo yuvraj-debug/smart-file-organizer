@@ -1,4 +1,0 @@
-ID3 tag for MP3 file
-/* MP3 audio data */
-FF FB 90 64 00 00 00 00
-/* Sample MP3 frame */
