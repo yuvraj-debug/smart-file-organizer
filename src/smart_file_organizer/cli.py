@@ -83,7 +83,18 @@ def main():
         # Set up logging level
         if args.verbose:
             import logging
-            logging.basicConfig(level=logging.INFO)
+            logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+            logging.info(f"Verbose mode enabled. Organizing directory: {args.directory}")
+            if args.by_date:
+                logging.info(f"Organization method: by date ({args.by_date}), format: {args.date_format}")
+            elif args.config:
+                logging.info(f"Organization method: custom rules from {args.config}")
+            else:
+                logging.info("Organization method: by file extension")
+            if ignore_patterns:
+                logging.info(f"Ignore patterns: {ignore_patterns}")
+            if args.dry_run:
+                logging.info("DRY RUN mode: No changes will be made")
         
         # Choose organization method
         if args.by_date:

@@ -1,0 +1,3 @@
+# Test DOCX file for organization testing
+This is a sample Word document used to test the file organizer's ability to handle .docx files.
+It should be moved to the Documents directory when organized.
