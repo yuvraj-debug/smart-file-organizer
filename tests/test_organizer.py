@@ -79,7 +79,9 @@ class TestOrganizer(unittest.TestCase):
             # The destination should be in a year folder (based on the file's modified time)
             # Since we just created the files, they should all be in the same year folder
             # We can't predict the exact year, but we can check the structure
-            self.assertRegex(str(dest), r'.*\/\d{4}\/.*')
+            # Use os.sep to handle both Windows and Unix path separators
+            dest_str = str(dest)
+            self.assertRegex(dest_str, rf'.*[\\/]\d{{4}}[\\/].*')
 
 if __name__ == '__main__':
     unittest.main()
