@@ -1,0 +1,35 @@
+{
+  "rules": [
+    {
+      "name": "Images",
+      "extensions": ["jpg", "jpeg", "png", "gif", "bmp", "tiff"],
+      "destination": "Images"
+    },
+    {
+      "name": "Documents",
+      "extensions": ["pdf", "doc", "docx", "txt", "rtf", "odt"],
+      "destination": "Documents"
+    },
+    {
+      "name": "Audio",
+      "extensions": ["mp3", "wav", "flac", "aac", "ogg"],
+      "destination": "Audio"
+    },
+    {
+      "name": "Video",
+      "extensions": ["mp4", "avi", "mkv", "mov", "wmv"],
+      "destination": "Video"
+    },
+    {
+      "name": "Archives",
+      "extensions": ["zip", "rar", "7z", "tar", "gz"],
+      "destination": "Archives"
+    }
+  ],
+  "ignore": [
+    "*.tmp",
+    "*.temp",
+    "Thumbs.db",
+    ".DS_Store"
+  ]
+}
