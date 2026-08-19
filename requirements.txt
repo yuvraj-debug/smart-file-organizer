@@ -1,0 +1,16 @@
+# Smart File Organizer CLI - Dependencies
+# Core functionality uses only Python standard library
+# Optional dependencies for enhanced features
+
+# Optional: For progress bars
+tqdm>=4.65.0
+
+# Optional: For colored output
+colorama>=0.4.6
+
+# Optional: For enhanced JSON schema validation
+jsonschema>=4.19.0
+
+# Testing dependencies
+pytest>=7.4.0
+pytest-cov>=4.1.0
