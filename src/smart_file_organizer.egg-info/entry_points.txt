@@ -1,0 +1,2 @@
+[console_scripts]
+sfo = smart_file_organizer.cli:main

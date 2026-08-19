@@ -1,23 +1,85 @@
 # Contributing to Smart File Organizer
 
-Thank you for considering contributing to Smart File Organizer! Please read this guide to understand how to contribute effectively.
+Thank you for considering contributing to Smart File Organizer! Please read this document carefully to understand our contribution process.
 
 ## How to Contribute
 
-### Reporting Issues
-- Use the GitHub issue tracker to report bugs or suggest features
-- Please include:
-  - Clear description of the issue
-  - Steps to reproduce (for bugs)
-  - Expected vs actual behavior
-  - Your operating system and Python version
-  - Any relevant logs or error messages
+### Reporting Bugs
+- Use the GitHub issue tracker
+- Label the issue as "bug"
+- Provide steps to reproduce the issue
+- Include your operating system and Python version
+- Attach relevant logs or screenshots if applicable
 
-### Making Changes
+### Suggesting Features
+- Use the GitHub issue tracker
+- Label the issue as "enhancement"
+- Clearly describe the feature and its benefits
+- Consider any potential drawbacks or edge cases
+
+### Submitting Changes
 1. Fork the repository
-2. Create a new branch for your feature or bugfix
+2. Create a new branch from `main`: `git checkout -b feature/your-feature-name`
 3. Make your changes
-4. Add or update tests as needed
+4. Ensure all tests pass: `python -m unittest discover tests/ -v`
+5. Commit your changes: `git commit -m "feat: add amazing feature"`
+6. Push to your fork: `git push origin feature/your-feature-name`
+7. Open a Pull Request against the `main` branch
+
+## Development Setup
+
+### Prerequisites
+- Python 3.8 or higher
+- Git
+- pip
+
+### Installation for Development
+```bash
+# Clone your fork
+git clone https://github.com/yourusername/smart-file-organizer.git
+cd smart-file-organizer
+
+# Install in development mode
+pip install -e .
+
+# Install test dependencies
+pip install -r requirements.txt
+```
+
+### Running Tests
+```bash
+# Run all tests
+python -m unittest discover tests/ -v
+
+# Run tests with coverage
+pip install pytest pytest-cov
+python -m pytest tests/ --cov=smart_file_organizer
+```
+
+### Code Style
+- Follow PEP 8 guidelines
+- Use descriptive variable and function names
+- Add docstrings to all public functions and classes
+- Keep lines to a maximum of 88 characters
+- Use 4 spaces for indentation (no tabs)
+
+## Pull Request Process
+
+1. Update the README.md if needed to reflect changes
+2. Ensure all tests pass
+3. Update documentation if applicable
+4. The PR will be reviewed by maintainers
+5. Address any feedback promptly
+6. Once approved, maintainers will merge the PR
+
+## Getting Help
+If you need help with anything, please:
+- Check the existing documentation
+- Look through existing issues
+- Ask in the GitHub discussions
+- Contact the maintainers
+
+Thank you for contributing to Smart File Organizer!
 5. Ensure all tests pass
 6. Submit a pull request
 
