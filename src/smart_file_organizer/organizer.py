@@ -77,6 +77,11 @@ def organize_files_by_extension(
             logger.info(f"Skipping symlink: {item}")
             continue
             
+        # Skip hidden files (starting with .)
+        if any(part.startswith('.') and part not in ['.', '..'] for part in item.parts):
+            logger.info(f"Skipping hidden file: {item}")
+            continue
+            
         # Skip if file matches any ignore pattern
         if any(item.match(pattern) for pattern in ignore_patterns):
             logger.info(f"Ignoring file: {item}")
@@ -154,6 +159,11 @@ def organize_files_by_date(
         # Skip symlinks for safety
         if item.is_symlink():
             logger.info(f"Skipping symlink: {item}")
+            continue
+            
+        # Skip hidden files (starting with .)
+        if any(part.startswith('.') and part not in ['.', '..'] for part in item.parts):
+            logger.info(f"Skipping hidden file: {item}")
             continue
             
         # Skip if file matches any ignore pattern
